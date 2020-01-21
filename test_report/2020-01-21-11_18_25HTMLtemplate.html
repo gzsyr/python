@@ -1,0 +1,2514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>项目测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>项目测试报告</h1>
+<p class='attribute'><strong>Start Time:</strong> 2020-01-21 11:18:25</p>
+<p class='attribute'><strong>Duration:</strong> 0:06:00.887000</p>
+<p class='attribute'><strong>Status:</strong> Pass 34 Failure 18 Error 16</p>
+
+<p class='description'>用例测试情况</p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>testsuits.test_rent_list.TestRentList</td>
+    <td>68</td>
+    <td>34</td>
+    <td>18</td>
+    <td>16</td>
+    <td><a href="javascript:showClassDetail('c1',68)">Detail</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_click_map_find</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
+
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.1: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442450947'])
+('switch to second window:', u'6442450947')
+Test Pass.
+('current_window_handle:', u'6442450947')
+('all handles:', [u'19', u'6442450947'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_click_personal_tab</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
+        error</a>
+
+    <div id='div_ft1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.2: Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 609, in test_click_personal_tab
+    rlpage.click_personal_tab()
+  File "E:\testPython\pythonRent\pageobjects\rentlist_page.py", line 251, in click_personal_tab
+    self.click(self.personal_tab)
+  File "E:\testPython\pythonRent\framework\basepage.py", line 174, in click
+    el = self.fine_element(selector)
+  File "E:\testPython\pythonRent\framework\basepage.py", line 128, in fine_element
+    "by %s via value : %s" %(element.text, selector_by, selector_value))
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe4 in position 23: ordinal not in range(128)
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_common_get_city</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        pass</a>
+
+    <div id='div_pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.3: Test Pass.
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_common_open_bbs</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4')" >
+        pass</a>
+
+    <div id='div_pt1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.4: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442450950'])
+('switch to second window:', u'6442450950')
+南京业主论坛，南京业主社区-365淘房华侨路茶坊
+Test Pass.
+('current_window_handle:', u'6442450950')
+('all handles:', [u'19', u'6442450950'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_common_open_index</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5')" >
+        pass</a>
+
+    <div id='div_pt1.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.5: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442450957'])
+('switch to second window:', u'6442450957')
+南京房地产家居门户网站-365淘房 三六五 南京房地产信息
+Test Pass.
+('current_window_handle:', u'6442450957')
+('all handles:', [u'19', u'6442450957'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_common_open_jiaju</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.6')" >
+        pass</a>
+
+    <div id='div_pt1.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.6: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442450961'])
+('switch to second window:', u'6442450961')
+家装_南京家居装修_365淘房
+Test Pass.
+('current_window_handle:', u'6442450961')
+('all handles:', [u'19', u'6442450961'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.7' class='none'>
+    <td class='failCase'><div class='testcase'>test_common_open_login</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.7')" >
+        fail</a>
+
+    <div id='div_ft1.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.7: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442450965'])
+('switch to second window:', u'6442450965')
+用户登陆 - 我的365
+('Test Fail.', '')
+('current_window_handle:', u'6442450965')
+('all handles:', [u'19', u'6442450965'])
+('switch to second window:', u'19')
+Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 240, in test_common_open_login
+    raise e
+AssertionError
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_common_open_newhouse</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.8')" >
+        pass</a>
+
+    <div id='div_pt1.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.8: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442450969'])
+('switch to second window:', u'6442450969')
+【南京新房_南京楼盘_南京房价查询】_南京新房网-365淘房
+Test Pass.
+('current_window_handle:', u'6442450969')
+('all handles:', [u'19', u'6442450969'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_common_open_phone</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.9')" >
+        pass</a>
+
+    <div id='div_pt1.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.9: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442450975'])
+('switch to second window:', u'6442450975')
+365淘房APP官网下载_365淘房官方客户端_买房APP下载_房产软件下载_365淘房
+Test Pass.
+('current_window_handle:', u'6442450975')
+('all handles:', [u'19', u'6442450975'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_common_open_register</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.10')" >
+        pass</a>
+
+    <div id='div_pt1.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.10: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442450979'])
+('switch to second window:', u'6442450979')
+用户注册 - 我的365
+Test Pass.
+('current_window_handle:', u'6442450979')
+('all handles:', [u'19', u'6442450979'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.11' class='none'>
+    <td class='failCase'><div class='testcase'>test_common_open_rent</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.11')" >
+        fail</a>
+
+    <div id='div_ft1.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.11: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442450983'])
+('switch to second window:', u'6442450983')
+【南京租房】_南京租房网_365租房网
+('Test Fail.', '')
+('current_window_handle:', u'6442450983')
+('all handles:', [u'19', u'6442450983'])
+('switch to second window:', u'19')
+Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 107, in test_common_open_rent
+    raise e
+AssertionError
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_common_open_sell</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.12')" >
+        pass</a>
+
+    <div id='div_pt1.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.12: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442450987'])
+('switch to second window:', u'6442450987')
+【南京二手房】_南京二手房网_365二手房网
+Test Pass.
+('current_window_handle:', u'6442450987')
+('all handles:', [u'19', u'6442450987'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.13' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_common_open_zhuangxiu</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.13')" >
+        pass</a>
+
+    <div id='div_pt1.13' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.13').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.13: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442450990'])
+('switch to second window:', u'6442450990')
+南京家居首页
+Test Pass.
+('current_window_handle:', u'6442450990')
+('all handles:', [u'19', u'6442450990'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.14' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_common_open_zsb</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.14')" >
+        pass</a>
+
+    <div id='div_pt1.14' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.14').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.14: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442450994'])
+('switch to second window:', u'6442450994')
+租售宝登录页，房产经纪人登录平台—365淘房
+Test Pass.
+('current_window_handle:', u'6442450994')
+('all handles:', [u'19', u'6442450994'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.15' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_common_show_all_city</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.15')" >
+        pass</a>
+
+    <div id='div_pt1.15' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.15').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.15: Test Pass.
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.16' class='none'>
+    <td class='errorCase'><div class='testcase'>test_common_show_service</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.16')" >
+        error</a>
+
+    <div id='div_ft1.16' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.16').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.16: Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 251, in test_common_show_service
+    if(False == rlpage.is_show_wxpic()):
+  File "E:\testPython\pythonRent\pageobjects\rentlist_page.py", line 159, in is_show_wxpic
+    return self.is_display(self.wxpic)
+  File "E:\testPython\pythonRent\framework\basepage.py", line 190, in is_display
+    logger.info("The element \' %s \' display."%el.text)
+AttributeError: 'str' object has no attribute 'text'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.17' class='none'>
+    <td class='failCase'><div class='testcase'>test_index_open_aizuna</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.17')" >
+        fail</a>
+
+    <div id='div_ft1.17' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.17').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.17: ('current_window_handle:', u'19')
+('all handles:', [u'19'])
+【南京二手房买卖_南京二手房出售信息】_南京二手房网_365二手房网
+('Test Fail.', '')
+('current_window_handle:', u'19')
+('all handles:', [u'19'])
+Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 376, in test_index_open_aizuna
+    raise e
+AssertionError
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.18' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_index_open_ask</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.18')" >
+        pass</a>
+
+    <div id='div_pt1.18' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.18').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.18: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442450998'])
+('switch to second window:', u'6442450998')
+【南京房产信息咨询_南京房产信息问答】_365二手房网
+Test Pass.
+('current_window_handle:', u'6442450998')
+('all handles:', [u'19', u'6442450998'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.19' class='none'>
+    <td class='errorCase'><div class='testcase'>test_index_open_bbs</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.19')" >
+        error</a>
+
+    <div id='div_ft1.19' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.19').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.19: Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 479, in test_index_open_bbs
+    rlpage.click_dh_bbs()
+  File "E:\testPython\pythonRent\pageobjects\rentlist_page.py", line 219, in click_dh_bbs
+    self.click(self.dh_bbs)
+  File "E:\testPython\pythonRent\framework\basepage.py", line 174, in click
+    el = self.fine_element(selector)
+  File "E:\testPython\pythonRent\framework\basepage.py", line 119, in fine_element
+    element = self.driver.find_element_by_link_text(selector_value)
+  File "D:\Python27\lib\site-packages\selenium-3.141.0-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 428, in find_element_by_link_text
+    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "D:\Python27\lib\site-packages\selenium-3.141.0-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "D:\Python27\lib\site-packages\selenium-3.141.0-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\Python27\lib\site-packages\selenium-3.141.0-py2.7.egg\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: Unable to locate element: \u8bba\u575b
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.20' class='none'>
+    <td class='failCase'><div class='testcase'>test_index_open_building</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.20')" >
+        fail</a>
+
+    <div id='div_ft1.20' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.20').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.20: ('current_window_handle:', u'19')
+('all handles:', [u'19'])
+【南京二手房买卖_南京二手房出售信息】_南京二手房网_365二手房网
+('Test Fail.', '')
+('current_window_handle:', u'19')
+('all handles:', [u'19'])
+Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 414, in test_index_open_building
+    raise e
+AssertionError
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.21' class='none'>
+    <td class='failCase'><div class='testcase'>test_index_open_community</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.21')" >
+        fail</a>
+
+    <div id='div_ft1.21' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.21').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.21: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451001'])
+('switch to second window:', u'6442451001')
+【南京房价,南京房价走势2020】_南京二手房网_365二手房网
+('Test Fail.', '')
+('current_window_handle:', u'6442451001')
+('all handles:', [u'19', u'6442451001'])
+('switch to second window:', u'19')
+Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 319, in test_index_open_community
+    raise e
+AssertionError
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.22' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_index_open_loan</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.22')" >
+        pass</a>
+
+    <div id='div_pt1.22' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.22').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.22: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451004'])
+('switch to second window:', u'6442451004')
+【南京二手房贷款_二手房贷款】_南京二手房网_365二手房网
+Test Pass.
+('current_window_handle:', u'6442451004')
+('all handles:', [u'19', u'6442451004'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.23' class='none'>
+    <td class='failCase'><div class='testcase'>test_index_open_modify</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.23')" >
+        fail</a>
+
+    <div id='div_ft1.23' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.23').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.23: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451008'])
+('switch to second window:', u'6442451008')
+用户登陆 - 我的365
+('Test Fail.', '')
+('current_window_handle:', u'6442451008')
+('all handles:', [u'19', u'6442451008'])
+('switch to second window:', u'19')
+Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 452, in test_index_open_modify
+    raise e
+AssertionError
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.24' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_index_open_publish</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.24')" >
+        pass</a>
+
+    <div id='div_pt1.24' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.24').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.24: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451013'])
+('switch to second window:', u'6442451013')
+【南京二手房交易,卖二手房,出售二手房】_南京二手房网_365二手房网
+Test Pass.
+('current_window_handle:', u'6442451013')
+('all handles:', [u'19', u'6442451013'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.25' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_index_open_school</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.25')" >
+        pass</a>
+
+    <div id='div_pt1.25' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.25').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.25: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451017'])
+('switch to second window:', u'6442451017')
+【学区房_南京学区房】_南京二手房网_365二手房网
+Test Pass.
+('current_window_handle:', u'6442451017')
+('all handles:', [u'19', u'6442451017'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.26' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_index_open_sell</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.26')" >
+        pass</a>
+
+    <div id='div_pt1.26' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.26').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.26: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451020'])
+('switch to second window:', u'6442451020')
+【南京二手房买卖_南京二手房出售信息】_南京二手房网_365二手房网
+Test Pass.
+('current_window_handle:', u'6442451020')
+('all handles:', [u'19', u'6442451020'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.27' class='none'>
+    <td class='failCase'><div class='testcase'>test_index_open_shop</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.27')" >
+        fail</a>
+
+    <div id='div_ft1.27' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.27').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.27: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451023'])
+('switch to second window:', u'6442451023')
+【南京商铺二手房买卖_南京商铺二手房出售信息】_南京二手房网_365二手房网
+('Test Fail.', '')
+('current_window_handle:', u'6442451023')
+('all handles:', [u'19', u'6442451023'])
+('switch to second window:', u'19')
+Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 395, in test_index_open_shop
+    raise e
+AssertionError
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.28' class='none'>
+    <td class='errorCase'><div class='testcase'>test_search_community</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.28')" >
+        error</a>
+
+    <div id='div_ft1.28' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.28').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.28: Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 576, in test_search_community
+    rlpage.click_search_btn()
+  File "E:\testPython\pythonRent\pageobjects\rentlist_page.py", line 243, in click_search_btn
+    self.click(self.search_btn)
+  File "E:\testPython\pythonRent\framework\basepage.py", line 177, in click
+    logger.info("The element \' %s \' was clicked." %el.text)
+  File "D:\Python27\lib\site-packages\selenium-3.141.0-py2.7.egg\selenium\webdriver\remote\webelement.py", line 76, in text
+    return self._execute(Command.GET_ELEMENT_TEXT)['value']
+  File "D:\Python27\lib\site-packages\selenium-3.141.0-py2.7.egg\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "D:\Python27\lib\site-packages\selenium-3.141.0-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\Python27\lib\site-packages\selenium-3.141.0-py2.7.egg\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+StaleElementReferenceException: Message: The element reference of &lt;div class="headSearch__btn fr"&gt; is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.29' class='none'>
+    <td class='failCase'><div class='testcase'>test_yc_dh_open_app</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.29')" >
+        fail</a>
+
+    <div id='div_ft1.29' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.29').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.29: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451026'])
+('switch to second window:', u'6442451026')
+365淘房APP官网下载_365淘房官方客户端_买房APP下载_房产软件下载_365淘房
+('Test Fail.', '')
+('current_window_handle:', u'6442451026')
+('all handles:', [u'19', u'6442451026'])
+('switch to second window:', u'19')
+Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 547, in test_yc_dh_open_app
+    raise e
+AssertionError
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.30' class='none'>
+    <td class='failCase'><div class='testcase'>test_yc_dh_open_feedback</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.30')" >
+        fail</a>
+
+    <div id='div_ft1.30' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.30').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.30: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451030'])
+('switch to second window:', u'6442451030')
+
+('Test Fail.', '')
+('current_window_handle:', u'6442451030')
+('all handles:', [u'19', u'6442451030'])
+('switch to second window:', u'19')
+Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 566, in test_yc_dh_open_feedback
+    raise e
+AssertionError
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.31' class='none'>
+    <td class='errorCase'><div class='testcase'>test_yc_dh_open_publish</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.31')" >
+        error</a>
+
+    <div id='div_ft1.31' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.31').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.31: Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 498, in test_yc_dh_open_publish
+    rlpage.click_yc_dh_publish()
+  File "E:\testPython\pythonRent\pageobjects\rentlist_page.py", line 223, in click_yc_dh_publish
+    self.click(self.yc_dh_pulish_rent)
+  File "E:\testPython\pythonRent\framework\basepage.py", line 176, in click
+    el.click()
+AttributeError: 'str' object has no attribute 'click'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.32' class='none'>
+    <td class='errorCase'><div class='testcase'>test_yc_dh_open_publishQ</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.32')" >
+        error</a>
+
+    <div id='div_ft1.32' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.32').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.32: Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 517, in test_yc_dh_open_publishQ
+    rlpage.click_yc_dh_publishQ()
+  File "E:\testPython\pythonRent\pageobjects\rentlist_page.py", line 227, in click_yc_dh_publishQ
+    self.click(self.yc_dh_pulish_rentQ)
+  File "E:\testPython\pythonRent\framework\basepage.py", line 176, in click
+    el.click()
+AttributeError: 'str' object has no attribute 'click'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.33' class='none'>
+    <td class='errorCase'><div class='testcase'>test_zc_dh_help_close</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.33')" >
+        error</a>
+
+    <div id='div_ft1.33' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.33').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.33: ('Test Fail.', "'str' object has no attribute 'text'")
+Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 652, in test_zc_dh_help_close
+    raise e
+AttributeError: 'str' object has no attribute 'text'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.34' class='none'>
+    <td class='failCase'><div class='testcase'>test_zc_dh_help_rent</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.34')" >
+        fail</a>
+
+    <div id='div_ft1.34' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.34').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.34: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451034'])
+('switch to second window:', u'6442451034')
+('Test Fail.', '')
+('current_window_handle:', u'6442451034')
+('all handles:', [u'19', u'6442451034'])
+('switch to second window:', u'19')
+Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 634, in test_zc_dh_help_rent
+    raise e
+AssertionError
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.35' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_click_map_find</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.35')" >
+        pass</a>
+
+    <div id='div_pt1.35' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.35').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.35: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451038'])
+('switch to second window:', u'6442451038')
+Test Pass.
+('current_window_handle:', u'6442451038')
+('all handles:', [u'19', u'6442451038'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.36' class='none'>
+    <td class='errorCase'><div class='testcase'>test_click_personal_tab</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.36')" >
+        error</a>
+
+    <div id='div_ft1.36' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.36').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.36: Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 609, in test_click_personal_tab
+    rlpage.click_personal_tab()
+  File "E:\testPython\pythonRent\pageobjects\rentlist_page.py", line 251, in click_personal_tab
+    self.click(self.personal_tab)
+  File "E:\testPython\pythonRent\framework\basepage.py", line 174, in click
+    el = self.fine_element(selector)
+  File "E:\testPython\pythonRent\framework\basepage.py", line 128, in fine_element
+    "by %s via value : %s" %(element.text, selector_by, selector_value))
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe4 in position 23: ordinal not in range(128)
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.37' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_common_get_city</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.37')" >
+        pass</a>
+
+    <div id='div_pt1.37' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.37').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.37: Test Pass.
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.38' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_common_open_bbs</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.38')" >
+        pass</a>
+
+    <div id='div_pt1.38' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.38').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.38: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451041'])
+('switch to second window:', u'6442451041')
+南京业主论坛，南京业主社区-365淘房华侨路茶坊
+Test Pass.
+('current_window_handle:', u'6442451041')
+('all handles:', [u'19', u'6442451041'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.39' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_common_open_index</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.39')" >
+        pass</a>
+
+    <div id='div_pt1.39' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.39').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.39: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451048'])
+('switch to second window:', u'6442451048')
+南京房地产家居门户网站-365淘房 三六五 南京房地产信息
+Test Pass.
+('current_window_handle:', u'6442451048')
+('all handles:', [u'19', u'6442451048'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.40' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_common_open_jiaju</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.40')" >
+        pass</a>
+
+    <div id='div_pt1.40' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.40').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.40: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451052'])
+('switch to second window:', u'6442451052')
+家装_南京家居装修_365淘房
+Test Pass.
+('current_window_handle:', u'6442451052')
+('all handles:', [u'19', u'6442451052'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.41' class='none'>
+    <td class='failCase'><div class='testcase'>test_common_open_login</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.41')" >
+        fail</a>
+
+    <div id='div_ft1.41' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.41').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.41: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451056'])
+('switch to second window:', u'6442451056')
+用户登陆 - 我的365
+('Test Fail.', '')
+('current_window_handle:', u'6442451056')
+('all handles:', [u'19', u'6442451056'])
+('switch to second window:', u'19')
+Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 240, in test_common_open_login
+    raise e
+AssertionError
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.42' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_common_open_newhouse</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.42')" >
+        pass</a>
+
+    <div id='div_pt1.42' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.42').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.42: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451060'])
+('switch to second window:', u'6442451060')
+【南京新房_南京楼盘_南京房价查询】_南京新房网-365淘房
+Test Pass.
+('current_window_handle:', u'6442451060')
+('all handles:', [u'19', u'6442451060'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.43' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_common_open_phone</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.43')" >
+        pass</a>
+
+    <div id='div_pt1.43' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.43').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.43: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451066'])
+('switch to second window:', u'6442451066')
+365淘房APP官网下载_365淘房官方客户端_买房APP下载_房产软件下载_365淘房
+Test Pass.
+('current_window_handle:', u'6442451066')
+('all handles:', [u'19', u'6442451066'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.44' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_common_open_register</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.44')" >
+        pass</a>
+
+    <div id='div_pt1.44' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.44').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.44: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451070'])
+('switch to second window:', u'6442451070')
+用户注册 - 我的365
+Test Pass.
+('current_window_handle:', u'6442451070')
+('all handles:', [u'19', u'6442451070'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.45' class='none'>
+    <td class='failCase'><div class='testcase'>test_common_open_rent</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.45')" >
+        fail</a>
+
+    <div id='div_ft1.45' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.45').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.45: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451074'])
+('switch to second window:', u'6442451074')
+【南京租房】_南京租房网_365租房网
+('Test Fail.', '')
+('current_window_handle:', u'6442451074')
+('all handles:', [u'19', u'6442451074'])
+('switch to second window:', u'19')
+Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 107, in test_common_open_rent
+    raise e
+AssertionError
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.46' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_common_open_sell</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.46')" >
+        pass</a>
+
+    <div id='div_pt1.46' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.46').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.46: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451078'])
+('switch to second window:', u'6442451078')
+【南京二手房】_南京二手房网_365二手房网
+Test Pass.
+('current_window_handle:', u'6442451078')
+('all handles:', [u'19', u'6442451078'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.47' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_common_open_zhuangxiu</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.47')" >
+        pass</a>
+
+    <div id='div_pt1.47' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.47').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.47: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451081'])
+('switch to second window:', u'6442451081')
+南京家居首页
+Test Pass.
+('current_window_handle:', u'6442451081')
+('all handles:', [u'19', u'6442451081'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.48' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_common_open_zsb</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.48')" >
+        pass</a>
+
+    <div id='div_pt1.48' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.48').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.48: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451085'])
+('switch to second window:', u'6442451085')
+租售宝登录页，房产经纪人登录平台—365淘房
+Test Pass.
+('current_window_handle:', u'6442451085')
+('all handles:', [u'19', u'6442451085'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.49' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_common_show_all_city</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.49')" >
+        pass</a>
+
+    <div id='div_pt1.49' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.49').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.49: Test Pass.
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.50' class='none'>
+    <td class='errorCase'><div class='testcase'>test_common_show_service</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.50')" >
+        error</a>
+
+    <div id='div_ft1.50' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.50').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.50: Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 251, in test_common_show_service
+    if(False == rlpage.is_show_wxpic()):
+  File "E:\testPython\pythonRent\pageobjects\rentlist_page.py", line 159, in is_show_wxpic
+    return self.is_display(self.wxpic)
+  File "E:\testPython\pythonRent\framework\basepage.py", line 190, in is_display
+    logger.info("The element \' %s \' display."%el.text)
+AttributeError: 'str' object has no attribute 'text'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.51' class='none'>
+    <td class='errorCase'><div class='testcase'>test_index_open_aizuna</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.51')" >
+        error</a>
+
+    <div id='div_ft1.51' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.51').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.51: Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 365, in test_index_open_aizuna
+    rlpage.click_dh_aizuna()
+  File "E:\testPython\pythonRent\pageobjects\rentlist_page.py", line 195, in click_dh_aizuna
+    self.click(self.aizuna)
+  File "E:\testPython\pythonRent\framework\basepage.py", line 177, in click
+    logger.info("The element \' %s \' was clicked." %el.text)
+  File "D:\Python27\lib\site-packages\selenium-3.141.0-py2.7.egg\selenium\webdriver\remote\webelement.py", line 76, in text
+    return self._execute(Command.GET_ELEMENT_TEXT)['value']
+  File "D:\Python27\lib\site-packages\selenium-3.141.0-py2.7.egg\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "D:\Python27\lib\site-packages\selenium-3.141.0-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\Python27\lib\site-packages\selenium-3.141.0-py2.7.egg\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+StaleElementReferenceException: Message: The element reference of &lt;a href="http://nj.sell.house365.com/district/x7-kw\u51e4\u51f0\u548c\u7f8e.html"&gt; is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.52' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_index_open_ask</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.52')" >
+        pass</a>
+
+    <div id='div_pt1.52' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.52').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.52: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451089'])
+('switch to second window:', u'6442451089')
+【南京房产信息咨询_南京房产信息问答】_365二手房网
+Test Pass.
+('current_window_handle:', u'6442451089')
+('all handles:', [u'19', u'6442451089'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.53' class='none'>
+    <td class='errorCase'><div class='testcase'>test_index_open_bbs</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.53')" >
+        error</a>
+
+    <div id='div_ft1.53' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.53').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.53: Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 479, in test_index_open_bbs
+    rlpage.click_dh_bbs()
+  File "E:\testPython\pythonRent\pageobjects\rentlist_page.py", line 219, in click_dh_bbs
+    self.click(self.dh_bbs)
+  File "E:\testPython\pythonRent\framework\basepage.py", line 174, in click
+    el = self.fine_element(selector)
+  File "E:\testPython\pythonRent\framework\basepage.py", line 119, in fine_element
+    element = self.driver.find_element_by_link_text(selector_value)
+  File "D:\Python27\lib\site-packages\selenium-3.141.0-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 428, in find_element_by_link_text
+    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "D:\Python27\lib\site-packages\selenium-3.141.0-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "D:\Python27\lib\site-packages\selenium-3.141.0-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\Python27\lib\site-packages\selenium-3.141.0-py2.7.egg\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: Unable to locate element: \u8bba\u575b
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.54' class='none'>
+    <td class='errorCase'><div class='testcase'>test_index_open_building</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.54')" >
+        error</a>
+
+    <div id='div_ft1.54' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.54').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.54: Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 403, in test_index_open_building
+    rlpage.click_dh_building()
+  File "E:\testPython\pythonRent\pageobjects\rentlist_page.py", line 203, in click_dh_building
+    self.click(self.building)
+  File "E:\testPython\pythonRent\framework\basepage.py", line 177, in click
+    logger.info("The element \' %s \' was clicked." %el.text)
+  File "D:\Python27\lib\site-packages\selenium-3.141.0-py2.7.egg\selenium\webdriver\remote\webelement.py", line 76, in text
+    return self._execute(Command.GET_ELEMENT_TEXT)['value']
+  File "D:\Python27\lib\site-packages\selenium-3.141.0-py2.7.egg\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "D:\Python27\lib\site-packages\selenium-3.141.0-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\Python27\lib\site-packages\selenium-3.141.0-py2.7.egg\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+StaleElementReferenceException: Message: The element reference of &lt;a href="http://nj.sell.house365.com/district/x3-kw\u51e4\u51f0\u548c\u7f8e.html"&gt; is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.55' class='none'>
+    <td class='failCase'><div class='testcase'>test_index_open_community</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.55')" >
+        fail</a>
+
+    <div id='div_ft1.55' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.55').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.55: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451092'])
+('switch to second window:', u'6442451092')
+【南京房价,南京房价走势2020】_南京二手房网_365二手房网
+('Test Fail.', '')
+('current_window_handle:', u'6442451092')
+('all handles:', [u'19', u'6442451092'])
+('switch to second window:', u'19')
+Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 319, in test_index_open_community
+    raise e
+AssertionError
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.56' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_index_open_loan</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.56')" >
+        pass</a>
+
+    <div id='div_pt1.56' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.56').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.56: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451095'])
+('switch to second window:', u'6442451095')
+【南京二手房贷款_二手房贷款】_南京二手房网_365二手房网
+Test Pass.
+('current_window_handle:', u'6442451095')
+('all handles:', [u'19', u'6442451095'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.57' class='none'>
+    <td class='failCase'><div class='testcase'>test_index_open_modify</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.57')" >
+        fail</a>
+
+    <div id='div_ft1.57' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.57').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.57: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451099'])
+('switch to second window:', u'6442451099')
+用户登陆 - 我的365
+('Test Fail.', '')
+('current_window_handle:', u'6442451099')
+('all handles:', [u'19', u'6442451099'])
+('switch to second window:', u'19')
+Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 452, in test_index_open_modify
+    raise e
+AssertionError
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.58' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_index_open_publish</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.58')" >
+        pass</a>
+
+    <div id='div_pt1.58' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.58').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.58: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451104'])
+('switch to second window:', u'6442451104')
+【南京二手房交易,卖二手房,出售二手房】_南京二手房网_365二手房网
+Test Pass.
+('current_window_handle:', u'6442451104')
+('all handles:', [u'19', u'6442451104'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.59' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_index_open_school</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.59')" >
+        pass</a>
+
+    <div id='div_pt1.59' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.59').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.59: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451110'])
+('switch to second window:', u'6442451110')
+【学区房_南京学区房】_南京二手房网_365二手房网
+Test Pass.
+('current_window_handle:', u'6442451110')
+('all handles:', [u'19', u'6442451110'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.60' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_index_open_sell</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.60')" >
+        pass</a>
+
+    <div id='div_pt1.60' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.60').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.60: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451113'])
+('switch to second window:', u'6442451113')
+【南京二手房买卖_南京二手房出售信息】_南京二手房网_365二手房网
+Test Pass.
+('current_window_handle:', u'6442451113')
+('all handles:', [u'19', u'6442451113'])
+('switch to second window:', u'19')
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.61' class='none'>
+    <td class='failCase'><div class='testcase'>test_index_open_shop</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.61')" >
+        fail</a>
+
+    <div id='div_ft1.61' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.61').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.61: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451116'])
+('switch to second window:', u'6442451116')
+【南京商铺二手房买卖_南京商铺二手房出售信息】_南京二手房网_365二手房网
+('Test Fail.', '')
+('current_window_handle:', u'6442451116')
+('all handles:', [u'19', u'6442451116'])
+('switch to second window:', u'19')
+Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 395, in test_index_open_shop
+    raise e
+AssertionError
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.62' class='none'>
+    <td class='errorCase'><div class='testcase'>test_search_community</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.62')" >
+        error</a>
+
+    <div id='div_ft1.62' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.62').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.62: Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 576, in test_search_community
+    rlpage.click_search_btn()
+  File "E:\testPython\pythonRent\pageobjects\rentlist_page.py", line 243, in click_search_btn
+    self.click(self.search_btn)
+  File "E:\testPython\pythonRent\framework\basepage.py", line 177, in click
+    logger.info("The element \' %s \' was clicked." %el.text)
+  File "D:\Python27\lib\site-packages\selenium-3.141.0-py2.7.egg\selenium\webdriver\remote\webelement.py", line 76, in text
+    return self._execute(Command.GET_ELEMENT_TEXT)['value']
+  File "D:\Python27\lib\site-packages\selenium-3.141.0-py2.7.egg\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "D:\Python27\lib\site-packages\selenium-3.141.0-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\Python27\lib\site-packages\selenium-3.141.0-py2.7.egg\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+StaleElementReferenceException: Message: The element reference of &lt;div class="headSearch__btn fr"&gt; is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.63' class='none'>
+    <td class='failCase'><div class='testcase'>test_yc_dh_open_app</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.63')" >
+        fail</a>
+
+    <div id='div_ft1.63' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.63').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.63: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451119'])
+('switch to second window:', u'6442451119')
+365淘房APP官网下载_365淘房官方客户端_买房APP下载_房产软件下载_365淘房
+('Test Fail.', '')
+('current_window_handle:', u'6442451119')
+('all handles:', [u'19', u'6442451119'])
+('switch to second window:', u'19')
+Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 547, in test_yc_dh_open_app
+    raise e
+AssertionError
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.64' class='none'>
+    <td class='failCase'><div class='testcase'>test_yc_dh_open_feedback</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.64')" >
+        fail</a>
+
+    <div id='div_ft1.64' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.64').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.64: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451123'])
+('switch to second window:', u'6442451123')
+
+('Test Fail.', '')
+('current_window_handle:', u'6442451123')
+('all handles:', [u'19', u'6442451123'])
+('switch to second window:', u'19')
+Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 566, in test_yc_dh_open_feedback
+    raise e
+AssertionError
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.65' class='none'>
+    <td class='errorCase'><div class='testcase'>test_yc_dh_open_publish</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.65')" >
+        error</a>
+
+    <div id='div_ft1.65' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.65').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.65: Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 498, in test_yc_dh_open_publish
+    rlpage.click_yc_dh_publish()
+  File "E:\testPython\pythonRent\pageobjects\rentlist_page.py", line 223, in click_yc_dh_publish
+    self.click(self.yc_dh_pulish_rent)
+  File "E:\testPython\pythonRent\framework\basepage.py", line 176, in click
+    el.click()
+AttributeError: 'str' object has no attribute 'click'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.66' class='none'>
+    <td class='errorCase'><div class='testcase'>test_yc_dh_open_publishQ</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.66')" >
+        error</a>
+
+    <div id='div_ft1.66' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.66').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.66: Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 517, in test_yc_dh_open_publishQ
+    rlpage.click_yc_dh_publishQ()
+  File "E:\testPython\pythonRent\pageobjects\rentlist_page.py", line 227, in click_yc_dh_publishQ
+    self.click(self.yc_dh_pulish_rentQ)
+  File "E:\testPython\pythonRent\framework\basepage.py", line 176, in click
+    el.click()
+AttributeError: 'str' object has no attribute 'click'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.67' class='none'>
+    <td class='errorCase'><div class='testcase'>test_zc_dh_help_close</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.67')" >
+        error</a>
+
+    <div id='div_ft1.67' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.67').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.67: ('Test Fail.', "'str' object has no attribute 'text'")
+Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 652, in test_zc_dh_help_close
+    raise e
+AttributeError: 'str' object has no attribute 'text'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.68' class='none'>
+    <td class='failCase'><div class='testcase'>test_zc_dh_help_rent</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.68')" >
+        fail</a>
+
+    <div id='div_ft1.68' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.68').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.68: ('current_window_handle:', u'19')
+('all handles:', [u'19', u'6442451127'])
+('switch to second window:', u'6442451127')
+('Test Fail.', '')
+('current_window_handle:', u'6442451127')
+('all handles:', [u'19', u'6442451127'])
+('switch to second window:', u'19')
+Traceback (most recent call last):
+  File "E:\testPython\pythonRent\testsuits\test_rent_list.py", line 634, in test_zc_dh_help_rent
+    raise e
+AssertionError
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>68</td>
+    <td>34</td>
+    <td>18</td>
+    <td>16</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>
