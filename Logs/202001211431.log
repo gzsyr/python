@@ -1,0 +1,247 @@
+2020-01-21 14:31:25,032 - BrowserEngine - INFO - you had select Firefox browse.
+2020-01-21 14:31:25,033 - BrowserEngine - INFO - the test server url is : http://nj.sell.house365.com/district/
+2020-01-21 14:31:47,700 - BrowserEngine - INFO - Starting firefox browser.
+2020-01-21 14:31:51,184 - BrowserEngine - INFO - Open url: http://nj.sell.house365.com/district/
+2020-01-21 14:31:51,469 - BrowserEngine - INFO - Maximize the current window.
+2020-01-21 14:31:51,509 - BrowserEngine - INFO - Set implicitly wait 10 seconds
+2020-01-21 14:31:51,536 - BasePage - INFO - Had find the element ' 地图找房 ' successful by xpath via value : //a[@class='mapBtn fl']
+2020-01-21 14:31:51,680 - BasePage - INFO - The element ' 地图找房 ' was clicked.
+2020-01-21 14:31:53,717 - BasePage - INFO - Get the Current page title 【地图找房_南京地图找房_南京二手房地图找房】_南京二手房网_365二手房网 
+2020-01-21 14:31:55,881 - BasePage - INFO - Had find the element ' 南京 ' successful by xpath via value : //div[contains(@class,'adress fl pre do-hover')]//span
+2020-01-21 14:31:56,053 - BasePage - INFO - The element ' 华侨路茶坊 ' was clicked.
+2020-01-21 14:31:58,063 - BasePage - INFO - Get the Current page title 南京业主论坛，南京业主社区-365淘房华侨路茶坊 
+2020-01-21 14:31:58,068 - BasePage - INFO - Get the Current page title 南京业主论坛，南京业主社区-365淘房华侨路茶坊 
+2020-01-21 14:32:00,299 - BasePage - INFO - The element ' 首页 ' was clicked.
+2020-01-21 14:32:02,326 - BasePage - INFO - Get the Current page title 南京房地产家居门户网站-365淘房 三六五 南京房地产信息 
+2020-01-21 14:32:02,331 - BasePage - INFO - Get the Current page title 南京房地产家居门户网站-365淘房 三六五 南京房地产信息 
+2020-01-21 14:32:04,565 - BasePage - INFO - The element ' 家居 ' was clicked.
+2020-01-21 14:32:06,588 - BasePage - INFO - Get the Current page title 家装_南京家居装修_365淘房 
+2020-01-21 14:32:06,591 - BasePage - INFO - Get the Current page title 家装_南京家居装修_365淘房 
+2020-01-21 14:32:08,836 - BasePage - INFO - The element ' 登录 ' was clicked.
+2020-01-21 14:32:10,868 - BasePage - INFO - Get the Current page title 用户登陆 - 我的365 
+2020-01-21 14:32:10,869 - BasePage - INFO - Get the Current page title 用户登陆 - 我的365 
+2020-01-21 14:32:13,098 - BasePage - INFO - The element ' 新房 ' was clicked.
+2020-01-21 14:32:15,135 - BasePage - INFO - Get the Current page title 【南京新房_南京楼盘_南京房价查询】_南京新房网-365淘房 
+2020-01-21 14:32:15,137 - BasePage - INFO - Get the Current page title 【南京新房_南京楼盘_南京房价查询】_南京新房网-365淘房 
+2020-01-21 14:32:17,391 - BasePage - INFO - The element ' 手机淘房 ' was clicked.
+2020-01-21 14:32:19,417 - BasePage - INFO - Get the Current page title 365淘房APP官网下载_365淘房官方客户端_买房APP下载_房产软件下载_365淘房 
+2020-01-21 14:32:19,421 - BasePage - INFO - Get the Current page title 365淘房APP官网下载_365淘房官方客户端_买房APP下载_房产软件下载_365淘房 
+2020-01-21 14:32:21,650 - BasePage - INFO - The element ' 注册 ' was clicked.
+2020-01-21 14:32:23,683 - BasePage - INFO - Get the Current page title 用户注册 - 我的365 
+2020-01-21 14:32:23,686 - BasePage - INFO - Get the Current page title 用户注册 - 我的365 
+2020-01-21 14:32:25,790 - BasePage - INFO - Had find the element ' 租房 ' successful by xpath via value : //div[@class='fl']//a[@target='_blank'][contains(text(),'租房')]
+2020-01-21 14:32:25,849 - BasePage - INFO - The element ' 租房 ' was clicked.
+2020-01-21 14:32:28,849 - BasePage - INFO - Sleep for 3 seconds
+2020-01-21 14:32:30,867 - BasePage - INFO - Get the Current page title 【南京租房】_南京租房网_365租房网 
+2020-01-21 14:32:30,869 - BasePage - INFO - Get the Current page title 【南京租房】_南京租房网_365租房网 
+2020-01-21 14:32:32,966 - BasePage - INFO - Had find the element ' 二手房 ' successful by xpath via value : //div[@class='fl']//a[@target='_blank'][contains(text(),'二手房')]
+2020-01-21 14:32:33,023 - BasePage - INFO - The element ' 二手房 ' was clicked.
+2020-01-21 14:32:35,062 - BasePage - INFO - Get the Current page title 【南京二手房】_南京二手房网_365二手房网 
+2020-01-21 14:32:35,065 - BasePage - INFO - Get the Current page title 【南京二手房】_南京二手房网_365二手房网 
+2020-01-21 14:32:37,335 - BasePage - INFO - The element ' 装修 ' was clicked.
+2020-01-21 14:32:39,335 - BasePage - INFO - Sleep for 2 seconds
+2020-01-21 14:32:41,351 - BasePage - INFO - Get the Current page title 南京家居首页 
+2020-01-21 14:32:41,355 - BasePage - INFO - Get the Current page title 南京家居首页 
+2020-01-21 14:32:43,588 - BasePage - INFO - The element ' 经纪人平台 ' was clicked.
+2020-01-21 14:32:45,628 - BasePage - INFO - Get the Current page title 租售宝登录页，房产经纪人登录平台—365淘房 
+2020-01-21 14:32:45,630 - BasePage - INFO - Get the Current page title 租售宝登录页，房产经纪人登录平台—365淘房 
+2020-01-21 14:32:47,711 - BasePage - INFO - Had find the element ' 南京 ' successful by xpath via value : //div[contains(@class,'adress fl pre do-hover')]//span
+2020-01-21 14:32:48,838 - BasePage - INFO - take screenshot and save to folder : /Screenshots
+2020-01-21 14:32:48,838 - BasePage - INFO - show the element pop 
+2020-01-21 14:32:50,838 - BasePage - INFO - Sleep for 2 seconds
+2020-01-21 14:32:50,954 - BasePage - INFO - Had find the element ' 热门城市：
+南京 合肥 芜湖
+A-F：
+安庆 蚌埠 成都 滁州 重庆 常州 阜阳
+G-J：
+合肥 海宁 哈尔滨 海盐 杭州 嘉兴 江阴
+K-N：
+六安 兰州 马鞍山 南京 南通
+P-W：
+上海 沈阳 苏州 天津 泰州 芜湖 无锡
+X-Z：
+西安 新乡 徐州 盐城 宜兴 扬州 遵义 ' successful by xpath via value : //div[@class='city-con']
+2020-01-21 14:32:51,049 - BasePage - INFO - Had find the element ' 联系客服 ' successful by xpath via value : //span[contains(text(),'联系客服')]
+2020-01-21 14:32:51,862 - BasePage - INFO - take screenshot and save to folder : /Screenshots
+2020-01-21 14:32:51,862 - BasePage - INFO - show the element pop 
+2020-01-21 14:33:01,871 - BasePage - ERROR - No Such Element Exception: Message: Unable to locate element: //img[@class='telUl-lt']
+
+2020-01-21 14:33:02,144 - BasePage - INFO - take screenshot and save to folder : /Screenshots
+2020-01-21 14:33:02,582 - BasePage - INFO - The element ' 公寓 ' was clicked.
+2020-01-21 14:33:04,595 - BasePage - INFO - Get the Current page title 【南京二手房买卖_南京二手房出售信息】_南京二手房网_365二手房网 
+2020-01-21 14:33:04,598 - BasePage - INFO - Get the Current page title 【南京二手房买卖_南京二手房出售信息】_南京二手房网_365二手房网 
+2020-01-21 14:33:06,793 - BasePage - INFO - The element ' 问答 ' was clicked.
+2020-01-21 14:33:08,818 - BasePage - INFO - Get the Current page title 【南京房产信息咨询_南京房产信息问答】_365二手房网 
+2020-01-21 14:33:08,821 - BasePage - INFO - Get the Current page title 【南京房产信息咨询_南京房产信息问答】_365二手房网 
+2020-01-21 14:33:22,509 - BasePage - INFO - The element ' 写字楼 ' was clicked.
+2020-01-21 14:33:24,517 - BasePage - INFO - Get the Current page title 【南京二手房买卖_南京二手房出售信息】_南京二手房网_365二手房网 
+2020-01-21 14:33:24,520 - BasePage - INFO - Get the Current page title 【南京二手房买卖_南京二手房出售信息】_南京二手房网_365二手房网 
+2020-01-21 14:33:26,701 - BasePage - INFO - The element ' 小区 ' was clicked.
+2020-01-21 14:33:28,736 - BasePage - INFO - Get the Current page title 【南京房价,南京房价走势2020】_南京二手房网_365二手房网 
+2020-01-21 14:33:28,739 - BasePage - INFO - Get the Current page title 【南京房价,南京房价走势2020】_南京二手房网_365二手房网 
+2020-01-21 14:33:30,983 - BasePage - INFO - The element ' 按揭服务 ' was clicked.
+2020-01-21 14:33:33,020 - BasePage - INFO - Get the Current page title 【南京二手房贷款_二手房贷款】_南京二手房网_365二手房网 
+2020-01-21 14:33:33,023 - BasePage - INFO - Get the Current page title 【南京二手房贷款_二手房贷款】_南京二手房网_365二手房网 
+2020-01-21 14:33:35,265 - BasePage - INFO - The element ' 修改删除房源 ' was clicked.
+2020-01-21 14:33:37,306 - BasePage - INFO - Get the Current page title 用户登陆 - 我的365 
+2020-01-21 14:33:37,309 - BasePage - INFO - Get the Current page title 用户登陆 - 我的365 
+2020-01-21 14:33:39,565 - BasePage - INFO - The element ' 发布房源 ' was clicked.
+2020-01-21 14:33:41,589 - BasePage - INFO - Get the Current page title 【南京二手房交易,卖二手房,出售二手房】_南京二手房网_365二手房网 
+2020-01-21 14:33:41,592 - BasePage - INFO - Get the Current page title 【南京二手房交易,卖二手房,出售二手房】_南京二手房网_365二手房网 
+2020-01-21 14:33:43,818 - BasePage - INFO - The element ' 学区 ' was clicked.
+2020-01-21 14:33:45,855 - BasePage - INFO - Get the Current page title 【学区房_南京学区房】_南京二手房网_365二手房网 
+2020-01-21 14:33:45,858 - BasePage - INFO - Get the Current page title 【学区房_南京学区房】_南京二手房网_365二手房网 
+2020-01-21 14:33:47,940 - BasePage - INFO - Had find the element ' 二手房 ' successful by xpath via value : //div[@class='navigation fl ml20']//a[@target='_blank'][contains(text(),'二手房')]
+2020-01-21 14:33:47,990 - BasePage - INFO - The element ' 二手房 ' was clicked.
+2020-01-21 14:33:50,013 - BasePage - INFO - Get the Current page title 【南京二手房买卖_南京二手房出售信息】_南京二手房网_365二手房网 
+2020-01-21 14:33:50,016 - BasePage - INFO - Get the Current page title 【南京二手房买卖_南京二手房出售信息】_南京二手房网_365二手房网 
+2020-01-21 14:33:52,098 - BasePage - INFO - Had find the element ' 商铺 ' successful by xpath via value : //div[@onclick="window.open('http://nj.sell.house365.com/district/x4.html')"]
+2020-01-21 14:33:52,348 - BasePage - INFO - The element ' 商铺 ' was clicked.
+2020-01-21 14:33:54,365 - BasePage - INFO - Get the Current page title 【南京商铺二手房买卖_南京商铺二手房出售信息】_南京二手房网_365二手房网 
+2020-01-21 14:33:54,367 - BasePage - INFO - Get the Current page title 【南京商铺二手房买卖_南京商铺二手房出售信息】_南京二手房网_365二手房网 
+2020-01-21 14:33:56,451 - BasePage - INFO - Had find the element '  ' successful by xpath via value : //div[@class='headSearch__box fl']//input[@placeholder='请输入小区名、位置或房源特征']
+2020-01-21 14:33:56,502 - BasePage - INFO - Had type ' 凤凰和美 ' in inutBox 
+2020-01-21 14:34:06,503 - BasePage - INFO - Sleep for 10 seconds
+2020-01-21 14:34:06,526 - BasePage - INFO - Had find the element '  ' successful by xpath via value : //div[@class='headSearch__box fl']//div[@class='headSearch__btn fr']
+2020-01-21 14:34:07,084 - BasePage - INFO - Had find the element '  ' successful by xpath via value : //a[@class='side-icon side-app do-side']
+2020-01-21 14:34:07,132 - BasePage - INFO - The element '  ' was clicked.
+2020-01-21 14:34:09,161 - BasePage - INFO - Get the Current page title 365淘房APP官网下载_365淘房官方客户端_买房APP下载_房产软件下载_365淘房 
+2020-01-21 14:34:09,164 - BasePage - INFO - Get the Current page title 365淘房APP官网下载_365淘房官方客户端_买房APP下载_房产软件下载_365淘房 
+2020-01-21 14:34:11,233 - BasePage - INFO - Had find the element '  ' successful by xpath via value : //a[@class='side-icon side-yj do-side']
+2020-01-21 14:34:11,279 - BasePage - INFO - The element '  ' was clicked.
+2020-01-21 14:34:13,308 - BasePage - INFO - Get the Current page title  
+2020-01-21 14:34:13,309 - BasePage - INFO - Get the Current page title  
+2020-01-21 14:34:25,365 - BasePage - ERROR - No Such Element Exception: Message: Unable to locate element: //a[@class='side-icon side-cz do-side']
+
+2020-01-21 14:34:25,625 - BasePage - INFO - take screenshot and save to folder : /Screenshots
+2020-01-21 14:34:35,631 - BasePage - ERROR - No Such Element Exception: Message: Unable to locate element: //a[@class='side-icon side-qz do-side']
+
+2020-01-21 14:34:35,881 - BasePage - INFO - take screenshot and save to folder : /Screenshots
+2020-01-21 14:34:35,892 - BasePage - INFO - Had find the element ' 帮你买房 ' successful by xpath via value : //div[@class='helpSlideT-msg']
+2020-01-21 14:34:36,417 - BasePage - INFO - take screenshot and save to folder : /Screenshots
+2020-01-21 14:34:36,417 - BasePage - INFO - show the element pop 
+2020-01-21 14:34:46,426 - BasePage - ERROR - No Such Element Exception: Message: Unable to locate element: //div[@class='helpSlideB-help jummto_publish']
+
+2020-01-21 14:34:46,664 - BasePage - INFO - take screenshot and save to folder : /Screenshots
+2020-01-21 14:34:46,677 - BasePage - INFO - Had find the element ' 帮你买房 ' successful by xpath via value : //div[@class='helpSlideT-msg']
+2020-01-21 14:34:46,940 - BasePage - INFO - The element ' 帮你买房 ' was clicked.
+2020-01-21 14:34:48,953 - BasePage - INFO - Get the Current page title 【南京买二手房,求购二手房,购买二手】_南京二手房网_365二手房网 
+2020-01-21 14:34:51,030 - BasePage - INFO - Had find the element ' 地图找房 ' successful by xpath via value : //a[@class='mapBtn fl']
+2020-01-21 14:34:51,062 - BasePage - INFO - The element ' 地图找房 ' was clicked.
+2020-01-21 14:34:53,092 - BasePage - INFO - Get the Current page title 【地图找房_南京地图找房_南京二手房地图找房】_南京二手房网_365二手房网 
+2020-01-21 14:34:55,207 - BasePage - INFO - Had find the element ' 南京 ' successful by xpath via value : //div[contains(@class,'adress fl pre do-hover')]//span
+2020-01-21 14:34:55,348 - BasePage - INFO - The element ' 华侨路茶坊 ' was clicked.
+2020-01-21 14:34:57,392 - BasePage - INFO - Get the Current page title 南京业主论坛，南京业主社区-365淘房华侨路茶坊 
+2020-01-21 14:34:57,395 - BasePage - INFO - Get the Current page title 南京业主论坛，南京业主社区-365淘房华侨路茶坊 
+2020-01-21 14:34:59,631 - BasePage - INFO - The element ' 首页 ' was clicked.
+2020-01-21 14:35:01,665 - BasePage - INFO - Get the Current page title 南京房地产家居门户网站-365淘房 三六五 南京房地产信息 
+2020-01-21 14:35:01,670 - BasePage - INFO - Get the Current page title 南京房地产家居门户网站-365淘房 三六五 南京房地产信息 
+2020-01-21 14:35:03,878 - BasePage - INFO - The element ' 家居 ' was clicked.
+2020-01-21 14:35:05,934 - BasePage - INFO - Get the Current page title 家装_南京家居装修_365淘房 
+2020-01-21 14:35:05,940 - BasePage - INFO - Get the Current page title 家装_南京家居装修_365淘房 
+2020-01-21 14:35:08,190 - BasePage - INFO - The element ' 登录 ' was clicked.
+2020-01-21 14:35:10,230 - BasePage - INFO - Get the Current page title 用户登陆 - 我的365 
+2020-01-21 14:35:10,233 - BasePage - INFO - Get the Current page title 用户登陆 - 我的365 
+2020-01-21 14:35:12,430 - BasePage - INFO - The element ' 新房 ' was clicked.
+2020-01-21 14:35:14,473 - BasePage - INFO - Get the Current page title 【南京新房_南京楼盘_南京房价查询】_南京新房网-365淘房 
+2020-01-21 14:35:14,476 - BasePage - INFO - Get the Current page title 【南京新房_南京楼盘_南京房价查询】_南京新房网-365淘房 
+2020-01-21 14:35:16,744 - BasePage - INFO - The element ' 手机淘房 ' was clicked.
+2020-01-21 14:35:18,782 - BasePage - INFO - Get the Current page title 365淘房APP官网下载_365淘房官方客户端_买房APP下载_房产软件下载_365淘房 
+2020-01-21 14:35:18,785 - BasePage - INFO - Get the Current page title 365淘房APP官网下载_365淘房官方客户端_买房APP下载_房产软件下载_365淘房 
+2020-01-21 14:35:21,040 - BasePage - INFO - The element ' 注册 ' was clicked.
+2020-01-21 14:35:23,088 - BasePage - INFO - Get the Current page title 用户注册 - 我的365 
+2020-01-21 14:35:23,091 - BasePage - INFO - Get the Current page title 用户注册 - 我的365 
+2020-01-21 14:35:25,201 - BasePage - INFO - Had find the element ' 租房 ' successful by xpath via value : //div[@class='fl']//a[@target='_blank'][contains(text(),'租房')]
+2020-01-21 14:35:25,252 - BasePage - INFO - The element ' 租房 ' was clicked.
+2020-01-21 14:35:28,253 - BasePage - INFO - Sleep for 3 seconds
+2020-01-21 14:35:30,267 - BasePage - INFO - Get the Current page title 【南京租房】_南京租房网_365租房网 
+2020-01-21 14:35:30,270 - BasePage - INFO - Get the Current page title 【南京租房】_南京租房网_365租房网 
+2020-01-21 14:35:32,372 - BasePage - INFO - Had find the element ' 二手房 ' successful by xpath via value : //div[@class='fl']//a[@target='_blank'][contains(text(),'二手房')]
+2020-01-21 14:35:32,431 - BasePage - INFO - The element ' 二手房 ' was clicked.
+2020-01-21 14:35:34,480 - BasePage - INFO - Get the Current page title 【南京二手房】_南京二手房网_365二手房网 
+2020-01-21 14:35:34,483 - BasePage - INFO - Get the Current page title 【南京二手房】_南京二手房网_365二手房网 
+2020-01-21 14:35:36,736 - BasePage - INFO - The element ' 装修 ' was clicked.
+2020-01-21 14:35:38,736 - BasePage - INFO - Sleep for 2 seconds
+2020-01-21 14:35:40,753 - BasePage - INFO - Get the Current page title 南京家居首页 
+2020-01-21 14:35:40,756 - BasePage - INFO - Get the Current page title 南京家居首页 
+2020-01-21 14:35:42,961 - BasePage - INFO - The element ' 经纪人平台 ' was clicked.
+2020-01-21 14:35:45,003 - BasePage - INFO - Get the Current page title 租售宝登录页，房产经纪人登录平台—365淘房 
+2020-01-21 14:35:45,005 - BasePage - INFO - Get the Current page title 租售宝登录页，房产经纪人登录平台—365淘房 
+2020-01-21 14:35:47,101 - BasePage - INFO - Had find the element ' 南京 ' successful by xpath via value : //div[contains(@class,'adress fl pre do-hover')]//span
+2020-01-21 14:35:47,648 - BasePage - INFO - take screenshot and save to folder : /Screenshots
+2020-01-21 14:35:47,648 - BasePage - INFO - show the element pop 
+2020-01-21 14:35:49,650 - BasePage - INFO - Sleep for 2 seconds
+2020-01-21 14:35:49,767 - BasePage - INFO - Had find the element ' 热门城市：
+南京 合肥 芜湖
+A-F：
+安庆 蚌埠 成都 滁州 重庆 常州 阜阳
+G-J：
+合肥 海宁 哈尔滨 海盐 杭州 嘉兴 江阴
+K-N：
+六安 兰州 马鞍山 南京 南通
+P-W：
+上海 沈阳 苏州 天津 泰州 芜湖 无锡
+X-Z：
+西安 新乡 徐州 盐城 宜兴 扬州 遵义 ' successful by xpath via value : //div[@class='city-con']
+2020-01-21 14:35:49,852 - BasePage - INFO - Had find the element ' 联系客服 ' successful by xpath via value : //span[contains(text(),'联系客服')]
+2020-01-21 14:35:50,388 - BasePage - INFO - take screenshot and save to folder : /Screenshots
+2020-01-21 14:35:50,388 - BasePage - INFO - show the element pop 
+2020-01-21 14:36:00,403 - BasePage - ERROR - No Such Element Exception: Message: Unable to locate element: //img[@class='telUl-lt']
+
+2020-01-21 14:36:00,697 - BasePage - INFO - take screenshot and save to folder : /Screenshots
+2020-01-21 14:36:01,108 - BasePage - INFO - The element ' 公寓 ' was clicked.
+2020-01-21 14:36:03,118 - BasePage - INFO - Get the Current page title 【南京二手房买卖_南京二手房出售信息】_南京二手房网_365二手房网 
+2020-01-21 14:36:03,121 - BasePage - INFO - Get the Current page title 【南京二手房买卖_南京二手房出售信息】_南京二手房网_365二手房网 
+2020-01-21 14:36:05,282 - BasePage - INFO - The element ' 问答 ' was clicked.
+2020-01-21 14:36:07,318 - BasePage - INFO - Get the Current page title 【南京房产信息咨询_南京房产信息问答】_365二手房网 
+2020-01-21 14:36:07,321 - BasePage - INFO - Get the Current page title 【南京房产信息咨询_南京房产信息问答】_365二手房网 
+2020-01-21 14:36:20,434 - BasePage - INFO - The element ' 小区 ' was clicked.
+2020-01-21 14:36:22,466 - BasePage - INFO - Get the Current page title 【南京房价,南京房价走势2020】_南京二手房网_365二手房网 
+2020-01-21 14:36:22,467 - BasePage - INFO - Get the Current page title 【南京房价,南京房价走势2020】_南京二手房网_365二手房网 
+2020-01-21 14:36:24,630 - BasePage - INFO - The element ' 按揭服务 ' was clicked.
+2020-01-21 14:36:26,690 - BasePage - INFO - Get the Current page title 【南京二手房贷款_二手房贷款】_南京二手房网_365二手房网 
+2020-01-21 14:36:26,693 - BasePage - INFO - Get the Current page title 【南京二手房贷款_二手房贷款】_南京二手房网_365二手房网 
+2020-01-21 14:36:28,904 - BasePage - INFO - The element ' 修改删除房源 ' was clicked.
+2020-01-21 14:36:30,950 - BasePage - INFO - Get the Current page title 用户登陆 - 我的365 
+2020-01-21 14:36:30,953 - BasePage - INFO - Get the Current page title 用户登陆 - 我的365 
+2020-01-21 14:36:33,165 - BasePage - INFO - The element ' 发布房源 ' was clicked.
+2020-01-21 14:36:35,201 - BasePage - INFO - Get the Current page title 【南京二手房交易,卖二手房,出售二手房】_南京二手房网_365二手房网 
+2020-01-21 14:36:35,204 - BasePage - INFO - Get the Current page title 【南京二手房交易,卖二手房,出售二手房】_南京二手房网_365二手房网 
+2020-01-21 14:36:37,444 - BasePage - INFO - The element ' 学区 ' was clicked.
+2020-01-21 14:36:39,490 - BasePage - INFO - Get the Current page title 【学区房_南京学区房】_南京二手房网_365二手房网 
+2020-01-21 14:36:39,493 - BasePage - INFO - Get the Current page title 【学区房_南京学区房】_南京二手房网_365二手房网 
+2020-01-21 14:36:41,581 - BasePage - INFO - Had find the element ' 二手房 ' successful by xpath via value : //div[@class='navigation fl ml20']//a[@target='_blank'][contains(text(),'二手房')]
+2020-01-21 14:36:41,631 - BasePage - INFO - The element ' 二手房 ' was clicked.
+2020-01-21 14:36:43,657 - BasePage - INFO - Get the Current page title 【南京二手房买卖_南京二手房出售信息】_南京二手房网_365二手房网 
+2020-01-21 14:36:43,661 - BasePage - INFO - Get the Current page title 【南京二手房买卖_南京二手房出售信息】_南京二手房网_365二手房网 
+2020-01-21 14:36:45,747 - BasePage - INFO - Had find the element ' 商铺 ' successful by xpath via value : //div[@onclick="window.open('http://nj.sell.house365.com/district/x4.html')"]
+2020-01-21 14:36:46,025 - BasePage - INFO - The element ' 商铺 ' was clicked.
+2020-01-21 14:36:48,035 - BasePage - INFO - Get the Current page title 【南京商铺二手房买卖_南京商铺二手房出售信息】_南京二手房网_365二手房网 
+2020-01-21 14:36:48,038 - BasePage - INFO - Get the Current page title 【南京商铺二手房买卖_南京商铺二手房出售信息】_南京二手房网_365二手房网 
+2020-01-21 14:36:50,135 - BasePage - INFO - Had find the element '  ' successful by xpath via value : //div[@class='headSearch__box fl']//input[@placeholder='请输入小区名、位置或房源特征']
+2020-01-21 14:36:50,220 - BasePage - INFO - Had type ' 凤凰和美 ' in inutBox 
+2020-01-21 14:37:00,220 - BasePage - INFO - Sleep for 10 seconds
+2020-01-21 14:37:00,243 - BasePage - INFO - Had find the element '  ' successful by xpath via value : //div[@class='headSearch__box fl']//div[@class='headSearch__btn fr']
+2020-01-21 14:37:00,517 - BasePage - INFO - Had find the element '  ' successful by xpath via value : //a[@class='side-icon side-app do-side']
+2020-01-21 14:37:00,559 - BasePage - INFO - The element '  ' was clicked.
+2020-01-21 14:37:02,585 - BasePage - INFO - Get the Current page title 365淘房APP官网下载_365淘房官方客户端_买房APP下载_房产软件下载_365淘房 
+2020-01-21 14:37:02,588 - BasePage - INFO - Get the Current page title 365淘房APP官网下载_365淘房官方客户端_买房APP下载_房产软件下载_365淘房 
+2020-01-21 14:37:04,660 - BasePage - INFO - Had find the element '  ' successful by xpath via value : //a[@class='side-icon side-yj do-side']
+2020-01-21 14:37:04,701 - BasePage - INFO - The element '  ' was clicked.
+2020-01-21 14:37:06,733 - BasePage - INFO - Get the Current page title  
+2020-01-21 14:37:06,736 - BasePage - INFO - Get the Current page title  
+2020-01-21 14:37:18,795 - BasePage - ERROR - No Such Element Exception: Message: Unable to locate element: //a[@class='side-icon side-cz do-side']
+
+2020-01-21 14:37:19,098 - BasePage - INFO - take screenshot and save to folder : /Screenshots
+2020-01-21 14:37:29,112 - BasePage - ERROR - No Such Element Exception: Message: Unable to locate element: //a[@class='side-icon side-qz do-side']
+
+2020-01-21 14:37:29,355 - BasePage - INFO - take screenshot and save to folder : /Screenshots
+2020-01-21 14:37:29,375 - BasePage - INFO - Had find the element ' 帮你买房 ' successful by xpath via value : //div[@class='helpSlideT-msg']
+2020-01-21 14:37:29,907 - BasePage - INFO - take screenshot and save to folder : /Screenshots
+2020-01-21 14:37:29,907 - BasePage - INFO - show the element pop 
+2020-01-21 14:37:39,917 - BasePage - ERROR - No Such Element Exception: Message: Unable to locate element: //div[@class='helpSlideB-help jummto_publish']
+
+2020-01-21 14:37:40,174 - BasePage - INFO - take screenshot and save to folder : /Screenshots
+2020-01-21 14:37:40,186 - BasePage - INFO - Had find the element ' 帮你买房 ' successful by xpath via value : //div[@class='helpSlideT-msg']
+2020-01-21 14:37:40,437 - BasePage - INFO - The element ' 帮你买房 ' was clicked.
+2020-01-21 14:37:42,451 - BasePage - INFO - Get the Current page title 【南京买二手房,求购二手房,购买二手】_南京二手房网_365二手房网 
