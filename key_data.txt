@@ -1,0 +1,7 @@
+open_browser||chrome
+visit||http://www.sogou.com
+input||//input[@id='query']||365淘房
+click||//input[@id='stb']
+sleep||3
+assert_word||house365.com
+quit

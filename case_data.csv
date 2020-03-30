@@ -1,0 +1,8 @@
+step_name,xpath,value
+open_browser,,chrome
+visit,,http://www.sogou.com
+input,//input[@id='query'],365Ã‘∑ø
+click,//input[@id='stb'],
+sleep,,2
+assert_word,,house365.com
+quit,,
